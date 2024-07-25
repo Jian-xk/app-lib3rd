@@ -8,23 +8,24 @@ fi
 
 profile_dir=$PROFILE_DIR
 if [ ! -n "$profile_dir" ] ; then
-    profile_dir=$PWD
+    profile_dir=/data/qtteam/work/app-lib3rd/profile
 fi
 
 build_platform=$1
 build_zipfile=$2
-build_platform_env=$profile_dir/toolchain-$build_platform.sh
-build_platform_cmake=$profile_dir/toolchain-$build_platform.cmake
-
-if [ ! -f "$build_platform_env" ] || [ ! -f "$build_platform_cmake" ]; then
-    echo "build platform unsupported"
-    exit 1
-fi
+length=${#build_platform}
 
 if [ "${build_platform: -1}" = "d" ]; then
     build_type='debug'
+    build_platform=${build_platform:0:length-1}
 else
     build_type='release'
+fi
+build_platform_env=$profile_dir/toolchain-$build_platform.sh
+build_platform_cmake=$profile_dir/toolchain-$build_platform.cmake
+if [ ! -f "$build_platform_env" ] || [ ! -f "$build_platform_cmake" ]; then
+    echo "build platform unsupported"
+    exit 1
 fi
 
 if [ "${build_zipfile: -3}" = "zip" ]; then
