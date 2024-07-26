@@ -8,7 +8,7 @@ fi
 
 # build 
 # 1. 检查主机工具pkg-config
-# 2. 检查aimy-lib3rd/lib3rd/libsdl/bin/sdl2-config
+# 2. 检查app-lib3rd/lib3rd/libsdl/bin/sdl2-config
 # 3. 拷贝编译好的sdl2文件（include) 到交叉编译的sysroot/usr/include 
 # 4. 拷贝编译好的sdl2文件（libs) 到交叉编译的sysroot/usr/lib 
 # 5. 拷贝编译好的sdl2文件（sdl2.pc) 到交叉编译的sysroot/usr/lib/pkgconfig 
@@ -16,7 +16,7 @@ fi
 # 7. 修复sysroot/usr/lib/pkgconfig/libdrm.pc，增加内容为("-I${includedir}/drm")
 
 echo "Make ture sdl2 is builded and install to sysroot"
-echo "call aimy-cicd/cross-compile/sysroot-install.sh"
+echo "call app-cicd/cross-compile/sysroot-install.sh"
 
 profile_dir=$PROFILE_DIR
 if [ ! -n "$profile_dir" ] ; then

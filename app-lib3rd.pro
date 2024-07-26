@@ -1,11 +1,11 @@
 TEMPLATE = subdirs
 
 SUBDIRS += \
-    aamlogger \
+#    aamlogger \
     lib3rd
 
-aamlogger.depends = lib3rd
+#aamlogger.depends = lib3rd
 
 DISTFILES += \
-    ./aimy-lib3rd-include.pri \
+    ./app-lib3rd-include.pri \
     README.md

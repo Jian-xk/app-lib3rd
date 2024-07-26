@@ -31,7 +31,7 @@ CONFIG(debug, debug|release) {
     PLATFORM_DIR_OUT = $${PLATFORM_DIR_OUT}d
 }
 
-LIB3RD_ROOT = $$PWD/../aimy-lib3rd/lib3rd
-LIB3RD_DEST = $$PWD/../build/$${PLATFORM_DIR_OUT}/aimy-lib3rd
+LIB3RD_ROOT = $$PWD/../app-lib3rd/lib3rd
+LIB3RD_DEST = $$PWD/../build/$${PLATFORM_DIR_OUT}/app-lib3rd
 
 LIBS += -L$${LIB3RD_DEST}

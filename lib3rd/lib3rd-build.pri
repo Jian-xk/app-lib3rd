@@ -35,7 +35,7 @@ CONFIG(debug, debug|release) {
     BUILD_PROJECT = $${BUILD_PACKAGE}
 }
 BUILD_ROOT = $$PWD/../../build
-BUILD_DIR = $${BUILD_ROOT}/$${PLATFORM_DIR_OUT}/aimy-lib3rd
+BUILD_DIR = $${BUILD_ROOT}/$${PLATFORM_DIR_OUT}/app-lib3rd
 
 # for build
 contains(BUILD_FLAGS, build) {
