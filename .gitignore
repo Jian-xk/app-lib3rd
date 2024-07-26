@@ -1,0 +1,10 @@
+.svn
+.vscode
+.deploy
+.pack/*
+*.pro.user
+*.txt.user
+*.cmake
+**/build*
+.git
+

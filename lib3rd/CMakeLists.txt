@@ -1,0 +1,11 @@
+# set(MODULE lib3rd)
+
+# add_subdirectory(libasound)
+ add_subdirectory(libbreakpad)
+# add_subdirectory(libcurl)
+# add_subdirectory(libdrm)
+# add_subdirectory(libffmpeg)
+# add_subdirectory(libopenal)
+# add_subdirectory(libprotobuf)
+# add_subdirectory(librkmpp)
+# add_subdirectory(libsdl)
